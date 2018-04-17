@@ -1,0 +1,30 @@
+<!-- Include plugins necessary for player -->
+<!-- Include the style sheet used by the player -->
+<link rel="stylesheet" href="//player.ooyala.com/static/v4/production/latest/skin-plugin/html5-skin.min.css"/>
+<!-- core provides basic player support-->
+<script src="//player.ooyala.com/static/v4/production/latest/core.min.js"></script>
+<!-- bit_wrapper supports HLS-everywhere and Dash support -->
+<script src="//player.ooyala.com/static/v4/production/latest/video-plugin/bit_wrapper.min.js"></script>
+<!-- main_html5 support browser supported video formats -->
+<script src="//player.ooyala.com/static/v4/production/latest/video-plugin/main_html5.min.js"></script>
+
+<script src="//player.ooyala.com/static/v4/production/ad-plugin/pulse.min.js"></script>
+<script src="//player.ooyala.com/static/v4/production/ad-plugin/ssai_pulse.js"></script>
+<script src="//localhost:8000/ssai_heartbeat.js"></script>
+
+<!-- html5-skin supports the basic player UI -->
+<!-- Player UI Definitions-->
+<script src="//player.ooyala.com/static/v4/production/latest/skin-plugin/html5-skin.min.js"></script>
+<!-- The following div will contain the instantiated player, and is identified by id -->
+<div id='container' style="width: 320px; height: 240px;"></div>
+<!-- Player parameter modify some basic player behaviors and looks -->
+<script>
+  var playerParam = {
+    'pcode': 'RpOWUyOq86gFq-STNqpgzhzIcXHV',
+    'playerBrandingId': '14b704fc808a45a58679eba5eb0382d0',
+    'autoplay': false,
+    'loop' :false,
+  };
+  OO.ready(function() {window.pp = OO.Player.create('container', 'dxbzNjZDE6nU5lB0PjWGQmD4Bqj9rcXZ', playerParam);});
+</script>
+
