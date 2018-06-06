@@ -36,17 +36,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // This is using the built-in support of the plain video element, without using hls.js.
         if (video.canPlayType('application/vnd.apple.mpegurl')) {
             video.src = baseURL;
-            video.addEventListener('canplay', function () {
-                video.play();
-            });
         }
         else if (Hls.isSupported()) {
             var hls = new Hls();    
             hls.loadSource(baseURL);
             hls.attachMedia(video);
-            hls.on(Hls.Events.MANIFEST_PARSED, function () {
-                video.play();
-            });
         }
         
     }
