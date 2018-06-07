@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function _onPlayed() {
         reportingPaused = false;
-        reportHeartBeat()
-        stopHeartBeat()
+        reportHeartBeat();
+        stopHeartBeat();
     }
 
     function _onPause() {
