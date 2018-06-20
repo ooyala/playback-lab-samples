@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         streamURL = baseURL || '';
         ssai_guid = parseGUID(streamURL);
         if (ssai_guid) {
+            reportHeartBeat();
             startHeartBeat();
         }
     }

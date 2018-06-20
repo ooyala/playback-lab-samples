@@ -100,6 +100,7 @@ OO.plugin('heartbeat', function(OO, _, $) {
       streamURL = url || '';
       ssai_guid = parseGUID(streamURL);
       if (ssai_guid) {
+        reportHeartBeat();
         startHeartBeat();
       }
     }
