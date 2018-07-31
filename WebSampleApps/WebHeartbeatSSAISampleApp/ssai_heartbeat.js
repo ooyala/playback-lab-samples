@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
             hls.loadSource(baseURL);
             hls.attachMedia(video);
         }
-        
     }
 
     function _onVcWillPlay() {
@@ -75,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function startHeartBeat() {
         stopHeartBeat();
-
         heartbeatTimer = setInterval(reportHeartBeat, config.Interval);
     }
 
@@ -114,7 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             _config.maxSegmentsToCheck = -1;
         }
-
         return _config;
     }
 

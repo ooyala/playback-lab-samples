@@ -45,7 +45,6 @@ OO.plugin('heartbeat', function(OO, _, $) {
       mb.subscribe(OO.EVENTS.VC_PLAYED, 'hearbeat', _onPlayed);
       mb.subscribe(OO.EVENTS.DESTROY, 'heartbeat', destroy)
       
-
       log('initialization completed', config);
     }
 
@@ -55,7 +54,6 @@ OO.plugin('heartbeat', function(OO, _, $) {
 
     function startHeartBeat() {
       stopHeartBeat();
-
       heartbeatTimer = setInterval(reportHeartBeat, config.Interval);
     }
 
@@ -91,9 +89,7 @@ OO.plugin('heartbeat', function(OO, _, $) {
       if ( result.length && result[1] ) {
         return result[1];
       }
-
       return '';
-      
     }
 
     function _onVcWillPlay(event, videoId, url) {
@@ -136,7 +132,6 @@ OO.plugin('heartbeat', function(OO, _, $) {
       } else {
         _config.maxSegmentsToCheck = -1;
       }
-
       return _config;
     }
 
@@ -154,7 +149,6 @@ OO.plugin('heartbeat', function(OO, _, $) {
       log('destroy');
     }
   };
-
+  
   return heartbeat;
-
 });
